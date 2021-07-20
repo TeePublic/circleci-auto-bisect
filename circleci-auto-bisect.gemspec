@@ -4,5 +4,10 @@ Gem::Specification.new do |s|
   s.description = 'Automatically run rspec bisect off remove circleci builds'
   s.license = 'MIT'
   s.authors = ['Efren Aguirre']
-  s.files = ['LICENSE', 'README.md', 'circleci-auto-bisect.gemspec']
+  s.files = [
+    'LICENSE',
+    'README.md',
+    'CHANGELOG.md',
+    'circleci-auto-bisect.gemspec'
+  ]
 end
