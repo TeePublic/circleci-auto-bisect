@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
     'LICENSE',
     'README.md',
     'CHANGELOG.md',
+    'lib/circleci_auto_bisect.rb',
     'circleci-auto-bisect.gemspec'
   ]
 end
