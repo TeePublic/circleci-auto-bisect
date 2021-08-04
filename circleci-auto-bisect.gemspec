@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   ]
 
   s.add_development_dependency 'codecov', '~> 0.5.2'
+  s.add_development_dependency 'dotenv', '~> 2.7.6'
   s.add_development_dependency 'rake', '~> 13.0.6'
   s.add_development_dependency 'rspec', '~> 3.10.0'
   s.add_development_dependency 'rubocop', '~> 1.18.3'
