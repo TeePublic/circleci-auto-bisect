@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
     'README.md',
     'CHANGELOG.md',
     'Gemfile',
+    'Rakefile',
     'lib/circleci_auto_bisect.rb',
     'circleci-auto-bisect.gemspec'
   ]
