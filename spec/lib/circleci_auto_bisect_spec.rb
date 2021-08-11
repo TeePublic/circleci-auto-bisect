@@ -13,13 +13,13 @@ RSpec.describe CircleciAutoBisect do
     let(:fake_class) { class_double('CircleciAutoBisect') }
 
     it 'is possible to set api token' do
-      expect(fake_class).to receive(:api_token=).with('123')
-      fake_class.api_token = '123'
+      expect(fake_class).to receive(:circleci_api_token=).with('123')
+      fake_class.circleci_api_token = '123'
     end
 
     it 'is possible to set context id' do
-      expect(fake_class).to receive(:context_id=).with('123')
-      fake_class.context_id = '123'
+      expect(fake_class).to receive(:circleci_context_id=).with('123')
+      fake_class.circleci_context_id = '123'
     end
   end
 end
