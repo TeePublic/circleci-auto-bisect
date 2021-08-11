@@ -5,9 +5,20 @@ require 'simplecov'
 
 SimpleCov.start 'rails' do
   add_filter 'spec/'
+  add_filter 'lib/generators/templates/'
 end
 
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].sort.each { |f| require f }
+
+ENV['RAILS_ENV'] = 'test'
+
+require_relative '../spec/dummy/config/environment'
+
+ENV['RAILS_ROOT'] ||= "#{File.dirname(__FILE__)}../../../spec/dummy"
+
 RSpec.configure do |config|
+  config.include FileManager
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -23,3 +34,5 @@ RSpec.configure do |config|
   config.warnings = false
   Kernel.srand config.seed
 end
+
+include FileManager
