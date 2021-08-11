@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name = 'circleci-auto-bisect'
   s.version = '0.0.1'
@@ -10,12 +12,16 @@ Gem::Specification.new do |s|
     'CHANGELOG.md',
     'Gemfile',
     'Rakefile',
-    'lib/circleci_auto_bisect.rb',
+    'lib/**/*.rb',
     'circleci-auto-bisect.gemspec'
   ]
+  s.test_files = Dir['spec/**/*.rb']
+  s.require_paths = ['lib']
+  s.required_ruby_version = '>= 2.5.0'
 
   s.add_development_dependency 'codecov', '~> 0.5.2'
   s.add_development_dependency 'dotenv', '~> 2.7.6'
+  s.add_development_dependency 'rails', '~> 6.0.3'
   s.add_development_dependency 'rake', '~> 13.0.6'
   s.add_development_dependency 'rspec', '~> 3.10.0'
   s.add_development_dependency 'rubocop', '~> 1.18.3'
