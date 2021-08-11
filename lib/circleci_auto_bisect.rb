@@ -2,7 +2,7 @@
 
 module CircleciAutoBisect
   class << self
-    attr_accessor :api_token, :context_id
+    attr_accessor :circleci_api_token, :circleci_context_id
 
     def config
       yield self
