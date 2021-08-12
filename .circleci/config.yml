@@ -1,0 +1,27 @@
+---
+version: 2.1
+
+jobs:
+  run-rspec:
+    docker:
+      - image: cimg/ruby:2.6.6-node
+    environment:
+      RAILS_ENV: test
+    steps:
+      - checkout
+      - run: gem install bundler
+      - restore_cache:
+          name: Restore bundle cache
+          key: circleci-auto-bisect--{{ checksum "Gemfile.lock" }}
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          name: Store bundle cache
+          key: circleci-auto-bisect-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec rspec
+
+workflows:
+  test-workflow:
+    jobs:
+      - run-rspec:
