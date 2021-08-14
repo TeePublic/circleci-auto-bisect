@@ -20,6 +20,7 @@ gem 'circleci-auto-bisect', '~> 0.0.1'
 ### Configuration
 
 For global configuration, automatically generate configuration file by executing:
+<br />
 `rails generate circleci_auto_bisect:install`
 
 For config object:
