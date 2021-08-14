@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary = 'Automatically run rspec bisect off remote circleci builds'
   s.license = 'MIT'
   s.authors = ['Efren Aguirre']
-  s.files = [
+  s.files = Dir[
     'LICENSE',
     'README.md',
     'CHANGELOG.md',

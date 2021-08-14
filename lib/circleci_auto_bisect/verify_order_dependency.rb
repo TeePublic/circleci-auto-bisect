@@ -31,8 +31,6 @@ module CircleciAutoBisect
           sparse_tee: false
         }.to_json
       end
-
-      puts resp.inspect
     end
 
     def context_url
